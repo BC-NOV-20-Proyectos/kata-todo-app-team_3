@@ -1,4 +1,4 @@
-<div class="col-4 mx-auto mt-4">
+<div class=" mx-auto mt-4">
   <%= form_for :session, url: session_path do |form| %>
   <div class="text-field">
     <%= form.label :email %>
@@ -10,14 +10,11 @@
     <%= form.password_field :password, class: "form-control" %>
   </div>
 
-  <div class="submit-field mt-2">
+  <div class="submit-field mt-4">
     <%= form.submit "login", class: "btn btn-success" %>
   </div>
 
   <div class="other-links mt-2">
-    <% if Clearance.configuration.allow_sign_up? %>
-      <%= link_to t(".sign_up"), sign_up_path, class: "btn btn-primary", style: "color: #fff;" %>
-    <% end %>
     <%= link_to t(".forgot_password"), new_password_path, class: "btn btn-danger", style: "color: #fff;" %>
   </div>
 <% end %>
