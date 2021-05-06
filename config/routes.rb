@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :tasks
   root to: 'main#index'
 
   resources :passwords, controller: 'clearance/passwords', only: %i[create new]
