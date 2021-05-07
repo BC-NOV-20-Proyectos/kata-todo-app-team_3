@@ -1,12 +1,15 @@
 <h1>Editing user</h1>
 
+<%= form_with(model: @user) do |form| %>
   <div class="text-field">
     <%= form.label "profile photo" %>
     <%= form.file_field :avatar %></br>
-    <image src="<%= (url_for(current_user.avatar)) %>" style="width: 120px;">
+    <image src="<%= (url_for(@user.avatar)) %>" style="width: 120px;">
   </div>
+  <%= render 'edit', user: @user %>
   
-<%= render 'form', user: @user %>
+<%end%>  
+
 
 
 <%= link_to 'Show', @user %> |
