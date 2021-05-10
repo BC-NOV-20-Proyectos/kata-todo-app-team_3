@@ -1,3 +1,6 @@
+
+<%= form_with(model: @user) do |form| %>
+
   <div class="text-field">
     <%= form.label :name %>
     <%= form.text_field :name, type: 'text' %>
@@ -13,17 +16,24 @@
     <%= form.text_field :email, type: 'email' %>
   </div>
 
-  <div class="text-field">
-    <%= form.label "profile photo" %>
-    <%= form.file_field :avatar %></br>
-  </div>
+  <% if signed_in? %>
 
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  
+  <%else%>
+
+    <div class="text-field">
+      <%= form.label "profile photo" %>
+      <%= form.file_field :avatar %></br>
+    </div>
+
+    <div class="password-field">
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
+
+  <%end%>
 
   <div class="submit-field">
     <%= form.submit %>
   </div>
+
+<% end %>
