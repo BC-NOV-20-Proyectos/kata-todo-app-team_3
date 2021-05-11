@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
 class MainController < ApplicationController
-  def index; end
+  def index
+    if signed_in?
+      
+    else
+      redirect_to sign_in_path
+    end
+  end
+
 end

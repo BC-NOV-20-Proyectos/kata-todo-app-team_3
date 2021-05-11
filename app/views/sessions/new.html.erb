@@ -1,7 +1,7 @@
 
-<div class="col-11 mt-5 pt-5 me-1 pe-1 ms-5 ps-5">
-  <div class="row mx-auto">
-    <div class="col-5 text-center pe-5">
+<div class="container col-10 pt-1 mt-5 ps-5 pe-5">
+  <div class="row mt-5">
+    <div class="col text-center pe-2 pb-5 pt-5 LeftLoginCard">
       <h2>Increase the productivity</h2> 
       </br>
       <p> get a better experience making the order </p>
@@ -9,11 +9,9 @@
       <p> <a href="#" > BrightCoders </a> ToDo app </p>
       <%= link_to t(".sign_up"), sign_up_path, class: "btn btn-primary mt-4", style: "color: #fff;" %>
     </div>
-    <div class="col-5 text-center ps-4">
-      <div class="">
-        <h2><%= t(".title") %></h2> 
-        <%= render partial: '/sessions/form' %>
-      </div>
+    <div class="col text-center pb-5 pt-5 ps-4 RightLoginCard">
+      <h2><%= t(".title") %></h2> 
+      <%= render partial: '/sessions/form' %>
     </div>
   </div>
 </div>
