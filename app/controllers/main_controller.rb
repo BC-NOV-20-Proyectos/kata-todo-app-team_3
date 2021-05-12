@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
 class MainController < ApplicationController
+
   def index
-    # @user = User.find(params[:id])
+    if signed_in?
+    else
+      redirect_to sign_in_path
+    end
   end
 
   def edit
-    
   end
   
 end
