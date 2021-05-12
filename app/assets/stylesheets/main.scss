@@ -1,3 +1,86 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+* { padding: 0; margin: 0; }
+
+body{
+
+
+  .container-main{
+
+    .sidebar{
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(180, 213, 218);
+      padding-top: 30px;
+      min-height: 100vh;
+  
+      .info-user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .username, .usermail{
+          margin-top: 15px;
+        }
+  
+        .profile-photo{
+          border-radius: 50%;
+        }
+      }
+    }
+  
+    .task-panel{
+      background-color: rgb(219, 218, 215);
+      padding-top: 30px;
+      padding: 30px;
+      max-width: 75%;
+
+
+      .btn-container{
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+
+        .btn-new-task{
+          display: flex;
+          width: fit-content;
+          text-decoration: none;
+          background-color: rgb(130, 186, 219);
+          padding: 8px 15px;
+          border-radius: 10%;
+          color: black;
+    
+          &:hover{
+            background-color: rgb(170, 202, 221);
+          }
+        }
+      }
+
+      .title-tasks{
+        max-width: fit-content;
+      }
+
+      .task-table{
+        width: 85%;
+        margin: 10px auto 5px;
+        margin-top: 30px;
+
+        .row-table{
+          border-bottom: solid .5px rgb(179, 179, 179);
+        }
+  
+      }
+    } 
+  }
+
+  a{
+    text-decoration: none;
+
+    &:hover{
+      background-color: rgb(219, 218, 215);
+    }
+  }
+
+}
