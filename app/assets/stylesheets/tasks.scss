@@ -1,0 +1,27 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sidebar{
+  background-color: rgb(180, 213, 218);
+  min-height: 100vh;
+
+  .info-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .username, .usermail{
+      margin-top: 15px;
+    }
+
+    .profile-photo{
+      border-radius: 50%;
+    }
+  }
+}
+
+.bg-gray{
+  background-color: rgb(219, 218, 215);
+
+}

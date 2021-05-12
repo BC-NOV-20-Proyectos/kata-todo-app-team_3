@@ -11,22 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="d-flex  flex-column align-items-xl-start m-5">
+    <div class="field mb-4">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div class="field mb-4">
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+  
+    <div class="field mb-4">
+      <%= form.label :due_to %>
+      <%= form.datetime_select :due_to %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  
+    <%= link_to 'Back', root_path %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+  
 
-  <div class="field">
-    <%= form.label :due_to %>
-    <%= form.datetime_select :due_to %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

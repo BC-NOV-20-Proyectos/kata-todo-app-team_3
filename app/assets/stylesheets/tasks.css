@@ -1,0 +1,30 @@
+.sidebar {
+  background-color: #b4d5da;
+  min-height: 100vh;
+}
+
+.sidebar .info-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .info-user .username, .sidebar .info-user .usermail {
+  margin-top: 15px;
+}
+
+.sidebar .info-user .profile-photo {
+  border-radius: 50%;
+}
+
+.bg-gray {
+  background-color: #dbdad7;
+}
+/*# sourceMappingURL=tasks.css.map */
