@@ -21,9 +21,39 @@
   }
 }
 
+.form{
+  margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+  .sidebar{
+    min-height: 100px;
+    padding-bottom: 40px;
+  }
+  .form-container{
+    padding: 0;
+    margin: 0;
+  }
+
+  .form{
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
 .bg-gray{
   background-color: rgb(219, 218, 215);
-
 }
 
 .form{

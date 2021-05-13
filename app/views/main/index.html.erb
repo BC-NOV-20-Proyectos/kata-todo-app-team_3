@@ -36,12 +36,18 @@
             <td><%= task.description %></td>
             <td><%= task.due_to %></td>
             <td>
-            <image class="" src="/assets/pencil.svg" style="width: 20px;">
-            <%= link_to 'Edit', edit_task_path(task)%>
+            <%= link_to image_tag("pencil.svg", class:"icon"), edit_task_path(task) %>
             </td>
+
             <td>
-            <image class="" src="/assets/delete.svg" style="width: 20px;">
-            <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <%= link_to image_tag("delete.svg", class:"icon"), task_path(task) %>
+            <%= link_to image_tag("delete.svg", class: "icon"), task, :method => "delete" %>
+
+
+
+            <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+         
           </tr>
         <% end %>
       </tbody>

@@ -27,6 +27,13 @@ body{
         }
       }
     }
+
+    $breakpoint-tablet: 768px;
+    @media (min-width: $breakpoint-tablet) {
+      .sidebar{
+        height: fit-content;
+      }
+    }
   
     .task-panel{
       background-color: rgb(219, 218, 215);
@@ -75,6 +82,10 @@ body{
     &:hover{
       background-color: rgb(219, 218, 215);
     }
+  }
+
+  .icon{
+    width: 20px;
   }
 
 }
