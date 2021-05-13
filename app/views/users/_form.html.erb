@@ -1,29 +1,29 @@
   <div class="text-field">
-    <%= form.label :name %>
-    <%= form.text_field :name, type: 'text' %>
+    <%= form.label :name, class: "mb-2" %>
+    <%= form.text_field :name, type: 'text', class: "form-control" %>
   </div>
 
   <div class="text-field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, type: 'text' %>
+    <%= form.label :lastname, class: "mb-2 mt-2"%>
+    <%= form.text_field :lastname, type: 'text', class: "form-control" %>
   </div>
 
   <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+    <%= form.label :email, class: "mb-2 mt-2" %>
+    <%= form.text_field :email, type: 'email', class: "form-control" %>
   </div>
 
   <div class="text-field">
-    <%= form.label "profile photo" %>
-    <%= form.file_field :avatar %></br>
+    <%= form.label "profile photo", class: "mb-2 mt-2" %>
+    <%= form.file_field :avatar %>
   </div>
 
   <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.label :password, class: "mb-2 mt-2" %>
+    <%= form.password_field :password, class: "form-control"%>
   </div>
   
 
-  <div class="submit-field">
-    <%= form.submit %>
+  <div class="submit-field pt-3">
+    <%= form.submit "sign_up", class: "btn btn-success" %>
   </div>

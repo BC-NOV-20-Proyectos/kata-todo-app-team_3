@@ -1,11 +1,19 @@
 .LeftLoginCard{
   background-image: image-url('orden.png');
   background-position: center;
-  border-radius: 10px 0px 0px 10px;
   p, h2, a {color: white;}
 }
 
 .RightLoginCard{
   background-color: #AEC8CE;
+}
+
+// at the moment of reuse RightLoginCard in the left the border raious made 
+// that the borders be roundered in other posicion so better was separaded and reused
+// in both forms (sign_in and sign_up)
+.RadiousLeft{
+  border-radius: 10px 0px 0px 10px;
+}
+.RadiousRight{
   border-radius: 0px 10px 10px 0px;
 }
