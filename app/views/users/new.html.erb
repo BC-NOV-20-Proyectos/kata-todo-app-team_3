@@ -1,13 +1,28 @@
-<div id="clearance" class="sign-up">
-  <h2><%= t(".title") %></h2>
-
-  <%= form_for @user do |form| %>
-    <%= render partial: '/users/form', object: form %>
-
-    <%= link_to "go back", sign_in_path%>
-
-    <div class="other-links">
-      <%= link_to t(".sign_in"), sign_in_path %>
+<div class="container col-10 pt-1 mt-5 ps-5 pe-5">
+  <div class="row mt-5">
+    
+    <%# the RightLoginCard is the left to reuse the styles given into the sign_in form %>
+    <div class="col text-center pe-2 pb-5 pt-2 RightLoginCard RadiousLeft">
+      <h2 class="pb-2"><%= t(".title") %></h2>
+      <%= form_for @user do |form| %>
+        <%= render partial: '/users/form', object: form %>
+      <% end %>
     </div>
-  <% end %>
+
+    <%# the LeftLoginCard is the right to reuse the styles given into the sign_in form %>
+    <div class="col text-center pb-5 pt-5 ps-4 LeftLoginCard RadiousRight">
+      <div class="row my-auto pt-5">
+        <div class="col my-auto pt-5">
+          <h2>We are waiting for you!</h2> 
+          </br>
+          <p> Make the order and get a better lifestyle now! </p>
+          </br>
+          <p> <a href="#" > BrightCoders </a> ToDo app </p>
+          <%= link_to t(".sign_in"), sign_in_path, class: "btn btn-primary mt-4", style: "color: #fff;" %>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
