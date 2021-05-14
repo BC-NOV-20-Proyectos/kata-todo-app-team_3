@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :tasks
   resources :users
   root to: 'main#index'
-  delete '/tasks/:id', to: 'tasks#destroy'
 
   resources :passwords, controller: 'clearance/passwords', only: %i[create new]
   resource :session, controller: 'clearance/sessions', only: [:create]
