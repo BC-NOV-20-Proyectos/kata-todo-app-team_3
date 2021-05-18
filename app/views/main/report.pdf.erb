@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+  <title>Document</title>
+</head>
+  <body>
+    <header class="header d-flex">
+      <h2 class="user-name">
+        <%= "#{current_user.name}'s tasks" %>
+      </h2>
+      <p class="p-date"> <%= Time.now.strftime("%b %d, %Y at %H:%I") %></p>
+    </header>
+    
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th class="">Title</th>
+          <th class="">Description</th>
+          <th class="">Due to</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody class="table-content">
+        <% @tasks.each do |task| %>
+          <tr class=row-table>
+            <td style="width: 200px;"><%= task.name %></td>
+            <td style="width: 200px;"><%= task.description %></td>
+            <td style="width: 200px;"><%= task.due_to.strftime("%b %d, %Y at %H:%I") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -38,6 +38,12 @@
         <% end %>
       </tbody>
     </table>
+
+    <div class="btn-convert-container">
+      <%= link_to "CSV File", '/report.csv', class: 'btn btn-pdf' %>
+      <%= link_to "PDF File", '/report.pdf', :target => "_blank" , class: 'btn btn-pdf' %>
+    </div>
+
   </div>
 </div>
 
