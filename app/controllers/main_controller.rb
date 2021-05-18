@@ -16,12 +16,20 @@ class MainController < ApplicationController
     else
       @tasks = Task.where(user_id: current_user.id)
       respond_to do |format|
+        format.html
+        format.json
+        format.pdf { render template: 'main/report', pdf: "Tasks" }
+      end
+    end
+  end
+
+  def generate_csv
+    @tasks = Task.where(user_id: current_user.id)
+
+    respond_to do |format|
       format.html
-      format.json
-      format.pdf { render template: 'main/report', pdf: "Tasks" }
+      format.csv { send_data @tasks.to_csv, filename: "tasks-#{Date.today}.csv" }
     end
-    end
-    
   end
 
 end

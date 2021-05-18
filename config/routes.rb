@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/sign_up' => 'clearance/users#new', as: 'sign_up'
   get 'report.pdf' => 'main#generate_pdf'
+  get 'report.csv' => 'main#generate_csv'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
