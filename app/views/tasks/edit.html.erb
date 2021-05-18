@@ -1,6 +1,12 @@
-<h1>Editing Task</h1>
 
-<%= render 'form', task: @task %>
+<div class="container-edit-task d-flex row">
+  <%= render 'main/sidebar' %>
 
-<%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+  <div class="form-container bg-gray col-xl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 col-xs-12">
+    <h2 class="mx-5 mt-3">Editing Task</h2>
+    <%= render 'form', task: @task %>
+  </div>
+  
+  
+</div>
+

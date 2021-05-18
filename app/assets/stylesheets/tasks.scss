@@ -1,3 +1,113 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sidebar{
+  background-color: rgb(180, 213, 218);
+  min-height: 45vw;
+ 
+
+  .info-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .username, .usermail{
+      margin-top: 15px;
+    }
+
+    .profile-photo{
+      border-radius: 50%;
+    }
+
+    .sign-out{
+      background-color: rgb(219, 218, 215);
+    }
+  }
+}
+
+.form{
+  margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+  .sidebar{
+    min-height: 100px;
+    padding-bottom: 40px;
+  }
+  .form-container{
+    padding: 0;
+    margin: 0;
+  }
+
+  .form{
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+.bg-gray{
+  background-color: rgb(219, 218, 215);
+}
+
+.form{
+  width: 45%;
+}
+
+.input{
+  text-decoration: none;
+  border: solid .2px rgb(179, 179, 179);
+  border-radius: 3px;
+  height: 30px;
+  margin-left: 20px;
+  padding-left: 5px;
+}
+
+select{
+  margin-left: 10px;
+  text-decoration: none;
+  border: none;
+  height: 30px;
+  width: fit-content;
+  border-radius: 3px;
+  background-color: rgb(248, 248, 248);
+}
+
+.btn{
+  background-color: rgb(63, 63, 63);
+  color: aliceblue;
+
+  &:hover{
+    background-color: aliceblue;
+    color: rgb(63, 63, 63);
+  }
+}
+
+.cancel{
+  margin-right: 20px;
+
+  &:hover{
+    color: rgb(0, 0, 0);
+  }
+}
+
+.task-table{
+  font-size: 20px;
+  .table-content{
+
+    td{
+      margin-top: auto;
+    }
+  }
+}

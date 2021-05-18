@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
 class MainController < ApplicationController
-
+  
   def index
-    if signed_in?
-    else
+    if !current_user
       redirect_to sign_in_path
+    else
+      @tasks = Task.where(user_id: current_user.id)
     end
   end
-
-  def edit
-  end
-  
 end

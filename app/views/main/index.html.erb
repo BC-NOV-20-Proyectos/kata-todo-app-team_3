@@ -1,3 +1,43 @@
-<h1> welcome <%= current_user.name%> </h1>
-<%= button_to 'Sign out', sign_out_path, method: :delete %>
-<%= link_to "nueva tarea", new_task_path%>
+
+<div class="container-main row">
+  <%= render 'sidebar'%>  
+
+  <div class="task-panel pt-5 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+
+    <div class="btn-container">
+      <a class="btn-new-task" href="/tasks/new">
+          New task
+      </a>
+    </div>
+
+    <h3 class="title-tasks">Pending tasks</h3>
+
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th class="mx-auto">Name</th>
+          <th class="mx-auto">Description</th>
+          <th class="mx-auto">Due to</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody class="table-content">
+        <% @tasks.each do |task| %>
+          <tr class=row-table>
+            <td><%= task.name %></td>
+            <td><%= task.description %></td>
+            <td><%= task.due_to.strftime("%b %d, %Y at %H:%I") %></td>
+            <td>
+            <%= link_to image_tag("pencil.svg", class:"icon"), edit_task_path(task) %>
+            </td>
+            <td>
+              <%= link_to image_tag("delete.svg", class: "icon"), task, :method => "delete", data: { confirm: 'Are you sure?' }  %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
