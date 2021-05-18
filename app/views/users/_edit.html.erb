@@ -1,39 +1,43 @@
-
-<%= form_with(model: @user) do |form| %>
-
-  <div class="text-field">
-    <%= form.label :name %>
-    <%= form.text_field :name, type: 'text' %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, type: 'text' %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
-  </div>
-
+<%= form_with(model:@user, html: {class: "form-edit-user"}) do |form| %>
   <% if signed_in? %>
+    <h1>Editing user</h1>
 
-  <%else%>
+    <div class="text-field mt-3">
+      <%= form.label :name %>
+    </div>
+      <%= form.text_field :name, type: 'text', class: "input-edit-user" %>
 
-    <div class="text-field">
-      <%= form.label "profile photo" %>
-      <%= form.file_field :avatar %></br>
+    <div class="text-field mt-3">
+      <%= form.label :last_name %>
+    </div>
+     <%= form.text_field :lastname, type: 'text', class: "input-edit-user" %>
+
+    <div class="text-field mt-3">
+      <%= form.label :email %>
+    </div>
+      <%= form.text_field :email, type: 'email', class:'mb-3 input-edit-user' %>
+
+    <% if @user.avatar.attached? %>
+      <div class="text-field my-2 mx-auto">
+        <%= form.label "profile photo" %>
+        <%= form.file_field :avatar %></br>
+        <image class="my-3 mx-auto rounded-circle" src="<%= (url_for(@user.avatar)) %>" style="width: 120px;">
+      </div>
+    <% else %>
+      <image class="profile-photo mx-auto rounded-circle" src="/assets/default-photo.jpg" style="width: 120px;">
+    <% end %>
+    
+    <div class="submit-field-edit-user my-2">
+      <%= link_to 'Cancel', root_path %>
+      <%= form.submit class: "btn-update-user"%>
     </div>
 
-    <div class="password-field">
-      <%= form.label :password %>
-      <%= form.password_field :password %>
-    </div>
+    
+  <% else %>
+    <% controller.redirect_to sign_in_path %>
+  <% end %>
+<%end%>
 
-  <%end%>
+  
 
-  <div class="submit-field">
-    <%= form.submit %>
-  </div>
 
-<% end %>

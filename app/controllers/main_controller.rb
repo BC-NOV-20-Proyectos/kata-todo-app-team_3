@@ -4,7 +4,10 @@ class MainController < ApplicationController
   before_action :set_task, only: %i[ destroy ]
 
   def index
-    @tasks = Task.where(user_id: current_user.id)
+    if !current_user
+      redirect_to sign_in_path
+    else
+      @tasks = Task.where(user_id: current_user.id)
+    end
   end
-
 end

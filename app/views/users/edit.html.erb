@@ -1,13 +1,4 @@
-<h1>Editing user</h1>
-
-<%= form_with(model: @user) do |form| %>
-  <div class="text-field">
-    <%= form.label "profile photo" %>
-    <%= form.file_field :avatar %></br>
-    <image src="<%= (url_for(@user.avatar)) %>" style="width: 120px;">
-  </div>
+<div class="body">
+ 
   <%= render 'edit', user: @user %>
-  
-<%end%>  
-
-<%= link_to 'Back', root_path %>
+</div>
