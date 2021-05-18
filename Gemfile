@@ -59,4 +59,6 @@ gem 'clearance', '~> 2.4'
 gem 'rubocop', require: false
 gem 'rubycritic', require: false
 gem 'sandi_meter', '~> 1.2'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf', git: 'https://github.com/mileszs/wicked_pdf.git', branch: 'master'
 # gem 'prawn', '~> 2.4'
