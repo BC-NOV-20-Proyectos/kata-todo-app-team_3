@@ -5,6 +5,7 @@ require 'active_support/core_ext/integer/time'
 Rails.application.configure do
 
   config.assets.check_precompiled_asset = false
+  config.active_storage.service = :azure
   
   # Settings specified here will take precedence over those in config/application.rb.
 
