@@ -1,16 +1,18 @@
-<div id="clearance" class="password-reset">
-  <h2><%= t(".title") %></h2>
-
-  <p><%= t(".description") %></p>
-
-  <%= form_for :password, url: passwords_path do |form| %>
-    <div class="text-field">
-      <%= form.label :email %>
-      <%= form.text_field :email, type: 'email' %>
+<div id="clearance" class="container card col-10 pt-1 mt-5 ps-5 pe-5 mb-5 pb-4 pb-4">
+  <div class="row mt-5">
+    <div class="col-6 mx-auto text-center pb-5 pt-5 ps-4">
+      <h2><%= t(".title") %></h2> 
+      <p><%= t(".description") %></p>
+      <%= form_for :password, url: passwords_path do |form| %>
+        <div class="text-field">
+          <%= form.label :email %>
+          <%= form.text_field :email, type: 'email', class: "form-control" %>
+        </div>
+        <div class="submit-field mt-5 ">
+          <%= link_to "login", root_path, class: "btn btn-warning" %>
+          <%= form.submit "reset", class: "btn btn-success" %>
+        </div>
+      <% end %>
     </div>
-
-    <div class="submit-field">
-      <%= form.submit %>
-    </div>
-  <% end %>
+  </div>
 </div>
