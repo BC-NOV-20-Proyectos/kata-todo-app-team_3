@@ -61,4 +61,5 @@ gem 'rubycritic', require: false
 gem 'sandi_meter', '~> 1.2'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf', git: 'https://github.com/mileszs/wicked_pdf.git', branch: 'master'
+gem 'azure-storage-blob'
 # gem 'prawn', '~> 2.4'
