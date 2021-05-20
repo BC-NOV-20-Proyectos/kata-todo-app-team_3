@@ -131,6 +131,8 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     flay (2.12.1)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
@@ -343,6 +345,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   clearance (~> 2.4)
+  figaro
   jbuilder (~> 2.7)
   pg
   puma (~> 5.0)
